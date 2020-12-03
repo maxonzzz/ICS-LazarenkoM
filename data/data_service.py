@@ -31,7 +31,7 @@ def get_dovidka():
     return dovidka_disk
 
 
-def show_dovidka(dovidkass):
+def show_dovidka(dovidkas):
     """ Дає змогу переглянути довідник
 
     Args:
@@ -47,7 +47,7 @@ def show_dovidka(dovidkass):
 
     print()
 
-    for dovidka in dovidkass:
+    for dovidka in dovidkas:
         if dovidka_code_from <= dovidka[0] <= dovidka_code_to:
             print("Код: {:2} Вид: {:25}".format(dovidka[0], dovidka[1]))
             kol_lines += 1
@@ -57,7 +57,7 @@ def show_dovidka(dovidkass):
         print("На жаль, код не знайдено.Спробуйте ще раз")
 
 
- #dovidnikass = get_dovidka()
+ #dovidnikas = get_dovidka()
  #show_dovidka(dovidkass)
 
 
