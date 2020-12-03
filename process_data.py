@@ -1,17 +1,17 @@
 """ Модуль розрахунку вихідних даних
 """
-
+#import функцій з бази даних
 from data_service import get_dovidka, get_data_in
 
-
+#Створення словника
 analiz = {
-    'pidpr'             : '',
-    'kod_vidy'          : '',
-    'zalishok_2018'     : 0.0,
-    'nadiyshlo_2018'    : 0.0,
-    'vibulo_2018'       : 0.0,
-    'zalishok_2019'     : 0.0,
-    'zminu'             : 0.0     
+    'pidpr'             : '',   #Назва підприємства
+    'kod_vidy'          : '',   #Вид основних засобів
+    'zalishok_2018'     : 0.0,  #Залишок на 1.01.2018
+    'nadiyshlo_2018'    : 0.0,  #Надійшло у 2018
+    'vibulo_2018'       : 0.0,  #Вибуло у 2018
+    'zalishok_2019'     : 0.0,  # Залишок на 1.01.19
+    'zminu'             : 0.0   #Зміна вартості за рік  
 }
 
 
@@ -49,7 +49,7 @@ def analiz_data_in():
 
     for data_in in data_ins:
 
-
+        #Копіювання
         analiz_work = analiz.copy()
 
 
