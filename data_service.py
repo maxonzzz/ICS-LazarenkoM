@@ -16,7 +16,7 @@ def get_dovidka():
         
     """
 
-    with open('./data/dovidka.txt', encoding="utf8") as dovidka_file:
+    with open('./data/dovidka.txt', encoding="utf-8") as dovidka_file:
         dovidka_list = dovidka_file.readlines()
 
     
@@ -68,7 +68,7 @@ def get_data_in():
        
     """
 
-    with open('./data/data-in.txt', encoding="utf8") as data_in_file:
+    with open('./data/data_in.txt', encoding="utf-8") as data_in_file:
         data_in_list =data_in_file.readlines()
 
     
