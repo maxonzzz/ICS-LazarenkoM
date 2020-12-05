@@ -76,7 +76,7 @@ def write_analiz(analiz_list):
 
 
 
-            while True:
+while True:
 
     # Виводить головне меню
     os.system('cls')
