@@ -58,7 +58,7 @@ def show_analiz(analiz_list):
 
 
 def write_analiz(analiz_list):
-    with open('./data/analiz.txt', 'w') as analiz_file:
+    with open('./data/analiz.txt', 'w', encoding='utf-8') as analiz_file:
         for analiz in analiz_list:
             line = \
                analiz['pidpr'] + ';' +          \
