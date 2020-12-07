@@ -13,10 +13,10 @@ MAIN_MENU = \
 """
 ~~~~~~~  ОБРОБКА ЗАЯВОК НА ПРОДАЖ УСТАТКУВАННЯ ~~~~~~~
 
-1 - вивід заявок на екран
-2 - запис заявок в файл
-3 - вивід списка накладних
-4 - вивід списка клієнтів
+1 - вивід таблиці аналізу засобів
+2 - запис таблиці аналізу в окремий файл
+3 - вивід списка руху основних даних
+4 - вивід довідки засобів
 0 - завершення роботи
 ----------------------------
 """
@@ -40,6 +40,7 @@ FOOTER = \
 STOP_MESSAGE = 'Для продовження натисніть <Enter>'
 
 def show_analiz(analiz_list):
+    
     print(f"\n\n{TITLE:^150}")
     print(HEADER)
 
@@ -47,7 +48,7 @@ def show_analiz(analiz_list):
         print(f"{analiz['pidpr']:16}",
               f"{analiz['kod_vidy']:23}",
               f"{analiz['zalishok_2018']:^21.2f}",
-              f"{analiz['nadiyshlo']:^17.2f}",
+              f"{analiz['nadiyshlo_2018']:^17.2f}",
               f"{analiz['vibulo_2018']:^13.2f}",
               f"{analiz['zalishok_2019']:^24.2f}",
               f"{analiz['zminu']:^21.2f}")
@@ -57,11 +58,11 @@ def show_analiz(analiz_list):
 
 
 def write_analiz(analiz_list):
-    with open('./data/analiz.txt', "w") as analiz_file:
+    with open('./data/analiz.txt', 'w') as analiz_file:
         for analiz in analiz_list:
             line = \
                analiz['pidpr'] + ';' +          \
-               analiz['kod_vidu'] + ';' +             \
+               analiz['kod_vidy'] + ';' +             \
                str(analiz['zalishok_2018']) + ';' +      \
                str(analiz['nadiyshlo_2018']) + ';' +       \
                str(analiz['vibulo_2018']) + ';' +    \
