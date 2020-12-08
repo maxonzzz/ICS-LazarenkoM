@@ -1,7 +1,7 @@
 """ Аналіз руху основних засобів
 """
 
-# Підключити функції з модуля 'data_service'
+#Import з data_service
 from data_service import get_data_in, get_dovidka
 
 # Структура аналізу руху основних засобів вихідних даних
@@ -39,12 +39,12 @@ def analiz_data_in():
 
         return "*** Код засобу не знайдений"
 
-    # Накопичувач аналізу руху основних засобів
+    #Накопичувач
     analiz_list = []
 
     for data_in in data_ins:
 
-        # Створити копію шаблона
+        #Копіює шаблон
         analiz_work = analiz.copy()
 
         analiz_work['pidpr'] = data_in[0]
