@@ -72,7 +72,7 @@ def write_analiz(analiz_list):
                
             analiz_file.write(line)  
             
-    print('\n[INFO]: Файл успішно записано...')     
+    print('Файл успішно записано...')     
 
 while True:
 
@@ -83,7 +83,7 @@ while True:
 
     # Кнопки керування
     if command_number == '0':
-        print('\n[INFO]: Програма завершила роботу\n')
+        print('\n Програма завершила роботу')
         exit(0)
 
     elif command_number == '1':
