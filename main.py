@@ -1,3 +1,5 @@
+
+
 """ Головний модуль задачі
 - Виводить розрахункову табліцю на екран та в файл
 - Виводить первинні данні на екран
@@ -111,3 +113,6 @@ while True:
         dovidka = get_dovidka()
         show_dovidka(dovidka)
         input(STOP_MESSAGE)
+
+
+        
