@@ -35,16 +35,18 @@ def analiz_data_in():
 
 
         for dovidka in dovidkas:
-            if dovidka[0] == dovidka_code:
+            if dovidka_code == dovidka[0]:
                 return dovidka[1]
 
         return "Код не знайдений" 
 
 
 
-
+    #накопичувач
     analiz_list = []
 
+    #data_ins = get_data_in()
+    #dovidkas = get_dovidka()
 
 
     for data_in in data_ins:

@@ -69,7 +69,7 @@ def get_data_in():
     """
 
     with open('./data/data_in.txt', encoding="utf-8") as data_in_file:
-        data_in_list =data_in_file.readlines()
+        data_in_list = data_in_file.readlines()
 
     
     data_in_disk = []
@@ -93,7 +93,7 @@ def show_data_in(data_ins):
     """
 
     # Інтерактивний процес користування споживачем (потрібно обрати "range" коду)
-    data_in_code_from = input("\nЗ якого кода виду засобів виводити? ")
+    data_in_code_from = input("З якого кода виду засобів виводити? ")
     data_in_code_to = input("По який код виду засобів виводити? ")
 
     
@@ -101,12 +101,12 @@ def show_data_in(data_ins):
 
     print()
 
-    for data in data_ins:
-        if data_in_code_from <= data[1] <= data_in_code_to:
-            print("Підприємство: {:13} Код: {:2}  Залишок: {:7}  Надійшло: {:7}  Вибуток: {:5}".format(data[0], data[1], data[2], data[3], data[4]))
+    for data_in in data_ins:
+        if data_in_code_from <= data_in[1] <= data_in_code_to:
+            print("Підприємство: {:13} Код: {:2}  Залишок: {:7}  Надійшло: {:7}  Вибуток: {:5}".format(data_in[0], data_in[1], data_in[2], data_in[3], data_in[4]))
             kol_lines += 1
 
-    
+     
     if kol_lines == 0:
         print("На жаль, код не знайдено.Спробуйте ще раз")
 
